@@ -14,8 +14,9 @@ body {
 }
 
 body.hot {
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
 		url(../image/hot.png) no-repeat center/cover;
+	background-size: cover;
 }
 
 body.hot #weather {
@@ -23,17 +24,26 @@ body.hot #weather {
 }
 
 body.cold {
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
 		url(../image/cold.png) no-repeat center/cover;
+	background-size: cover;
 }
 
 body.cold #weather {
 	background-image: url(../image/cold.png);
 }
 
+@media (max-width: 699px){
+#weather{
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+}}
+
+
+
 #weather {
 	min-width: 350px;
-	height: 600px;
 	background: no-repeat center/cover;
 	text-align: center;
 	padding: 30px 20px;
@@ -65,7 +75,7 @@ body.cold #weather {
 
 #weather .content .name {
 	white-space: nowrap;
-	font-size: 35px;
+	font-size: 30px;
 	text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -103,6 +113,7 @@ body.cold #weather {
 	font-size: 16px;
 	display: flex;
 	flex-direction: column;
+	padding: 0 20px;
 }
 
 #weather .content .more-desc > div span {
